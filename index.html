@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>title</title>
+  <meta name="author" content="name">
+  <meta name="description" content="description here">
+  <meta name="keywords" content="keywords,here">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  </head>
+  <body>
+        <select id="select" onchange="updatePageSize(event)">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+        </br>
+        <label for="name">Global Filter</label>
+
+
+        <input type="text" id="name" name="name" required
+                onkeyup="globalSearch(event)">
+<br>
+
+    <!-- <input type="button" value="Generate a table." onclick="generate_table()"> -->
+    <div id='table-wrapper'>
+
+    </div>
+    <div class="pagination-wrapper">
+    <input type="button" value="prev." onclick="changePage(-1)">
+
+        <div id="page-list">
+
+        </div>
+    <input type="button" value="next." onclick="changePage(1)">
+
+    </div>
+  </body>
+
+  <script src="js/index.js"></script>
+
+</html>
